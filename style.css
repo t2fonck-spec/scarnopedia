@@ -1,0 +1,504 @@
+/* =====================================================
+   SCARNOPEDIA — Threat Level Midnight's Free Encyclopedia
+   Wikipedia-faithful stylesheet
+   ===================================================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #0645ad;
+  --blue-v:  #0b0080;
+  --red:     #ba0000;
+  --border:  #a2a9b1;
+  --bg-gray: #f8f9fa;
+  --bg-side: #f8f9fa;
+  --text:    #202122;
+  --header-h: 50px;
+}
+
+body {
+  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:visited { color: var(--blue-v); }
+a:hover { text-decoration: underline; }
+a.redlink { color: var(--red); }
+
+/* ===== SITE HEADER ===== */
+#site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  height: var(--header-h);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+#logo-block {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: var(--bg-gray);
+  border-right: 1px solid var(--border);
+  gap: 8px;
+}
+.logo-globe {
+  font-size: 28px;
+  line-height: 1;
+}
+.logo-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+}
+.logo-name em {
+  font-style: normal;
+  color: #c00;
+}
+
+#header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+#search-form {
+  display: flex;
+  gap: 4px;
+}
+#search-form input {
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 2px;
+  width: 220px;
+  color: #54595d;
+}
+#search-form button {
+  border: 1px solid var(--border);
+  background: var(--bg-gray);
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--text);
+}
+#search-form button:hover { background: #e8e8e8; }
+
+#personal-tools {
+  font-size: 12px;
+  color: #54595d;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#personal-tools a { color: #54595d; }
+
+/* ===== PAGE TABS ===== */
+#page-tabs {
+  background: var(--bg-gray);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  padding: 0 0 0 160px;
+  align-items: flex-end;
+}
+.tab {
+  padding: 6px 14px 5px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  cursor: pointer;
+  background: var(--bg-gray);
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-block;
+}
+.tab:hover { background: #e8e8e8; text-decoration: none; }
+.tab.active {
+  background: #fff;
+  color: var(--text);
+  border-bottom: 1px solid #fff;
+  z-index: 1;
+}
+
+/* ===== LAYOUT ===== */
+#layout {
+  display: flex;
+  min-height: calc(100vh - var(--header-h) - 36px);
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  width: 160px;
+  flex-shrink: 0;
+  background: var(--bg-side);
+  border-right: 1px solid var(--border);
+  padding: 12px 0;
+  font-size: 12.5px;
+}
+.sidebar-section {
+  margin-bottom: 14px;
+}
+.sidebar-section h3 {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #54595d;
+  padding: 4px 12px 2px;
+  letter-spacing: 0.05em;
+}
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-section ul li a {
+  display: block;
+  padding: 2px 12px;
+  color: var(--blue);
+  font-size: 12.5px;
+}
+.sidebar-section ul li a:hover { text-decoration: underline; }
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 8px 0;
+}
+
+/* ===== CONTENT AREA ===== */
+#content {
+  flex: 1;
+  padding: 16px 24px 32px 24px;
+  max-width: 960px;
+}
+
+/* ===== PAGE TITLE ===== */
+#firstHeading {
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: 28px;
+  font-weight: normal;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+  color: #000;
+}
+.page-subtitle {
+  font-size: 13px;
+  color: #54595d;
+  font-style: italic;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+/* ===== ARTICLE BODY ===== */
+.mw-parser-output {
+  line-height: 1.65;
+}
+.mw-parser-output p {
+  margin-bottom: 10px;
+}
+.mw-parser-output h2 {
+  font-family: 'Linux Libertine', Georgia, Times, serif;
+  font-size: 22px;
+  font-weight: normal;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  margin: 22px 0 8px;
+}
+.mw-parser-output h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 16px 0 6px;
+}
+.mw-parser-output h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 12px 0 4px;
+}
+.mw-parser-output ul, .mw-parser-output ol {
+  margin: 6px 0 10px 24px;
+}
+.mw-parser-output li { margin-bottom: 3px; }
+
+/* ===== INFOBOX ===== */
+.infobox {
+  float: right;
+  clear: right;
+  margin: 0 0 16px 24px;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: var(--bg-gray);
+  font-size: 13px;
+  width: 260px;
+  border-collapse: collapse;
+}
+.infobox caption {
+  background: #cee0f2;
+  padding: 6px 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.infobox-image {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.infobox-image img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.infobox-avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  border: 2px solid var(--border);
+}
+.infobox tr td {
+  padding: 4px 8px;
+  vertical-align: top;
+  border-top: 1px solid #eaecf0;
+}
+.infobox tr td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+  color: #54595d;
+  width: 90px;
+}
+.infobox-header {
+  background: #cee0f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 8px;
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+#toc {
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  display: inline-block;
+  min-width: 200px;
+  max-width: 340px;
+  margin: 0 0 16px 0;
+  font-size: 13px;
+}
+#toc .toctitle {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+#toc ol {
+  margin: 0;
+  padding-left: 20px;
+}
+#toc ol li {
+  margin: 2px 0;
+}
+#toc ol ol {
+  padding-left: 18px;
+}
+#toc a { color: var(--text); }
+#toc a:hover { text-decoration: underline; }
+
+/* ===== QUOTE BLOCK ===== */
+.tlm-quote {
+  background: #f6f7f8;
+  border-left: 3px solid var(--border);
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-style: italic;
+  font-size: 13.5px;
+}
+.tlm-quote .attribution {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: #54595d;
+  margin-top: 4px;
+}
+
+/* ===== HATNOTE ===== */
+.hatnote {
+  font-style: italic;
+  font-size: 13px;
+  color: #54595d;
+  padding: 2px 0 8px 0;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* ===== STUB NOTICE ===== */
+.stub-notice {
+  background: #f8f9fa;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: #54595d;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== CATEGORIES ===== */
+#catlinks {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  font-size: 13px;
+  margin-top: 24px;
+  background: var(--bg-gray);
+  clear: both;
+}
+#catlinks .catlinks-label {
+  font-weight: bold;
+}
+#catlinks a { color: var(--blue); }
+
+/* ===== NOTICE BOXES ===== */
+.notice-box {
+  border: 1px solid #a2a9b1;
+  background: #eaf3fb;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.notice-box.yellow { background: #fef8e7; border-color: #e8c000; }
+.notice-box.red { background: #fee7e7; border-color: #c00; }
+.notice-box.green { background: #eafbea; border-color: #090; }
+.notice-icon { font-size: 20px; flex-shrink: 0; }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  border-left: 3px solid #cee0f2;
+  margin: 12px 0 12px 16px;
+  padding: 0 0 0 16px;
+}
+.timeline-event {
+  margin-bottom: 14px;
+  position: relative;
+}
+.timeline-event::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #3680b0;
+  border-radius: 50%;
+  position: absolute;
+  left: -22px;
+  top: 5px;
+}
+.timeline-date {
+  font-weight: bold;
+  font-size: 12.5px;
+  color: #54595d;
+}
+.timeline-event p { margin: 2px 0; }
+
+/* ===== FOOTER ===== */
+#footer {
+  background: var(--bg-gray);
+  border-top: 1px solid var(--border);
+  padding: 12px 24px 12px 184px;
+  font-size: 12px;
+  color: #54595d;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#footer a { color: #54595d; }
+#footer a:hover { text-decoration: underline; }
+
+/* ===== MAIN PAGE SPECIFIC ===== */
+.main-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+.main-col-box {
+  border: 1px solid var(--border);
+}
+.main-col-box .box-header {
+  background: #cee0f2;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.main-col-box .box-body {
+  padding: 10px 12px;
+  font-size: 13.5px;
+}
+.main-featured {
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.main-featured .box-header {
+  background: #cee0f2;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.main-featured .box-body {
+  padding: 12px 14px;
+  font-size: 13.5px;
+}
+
+/* ===== TABLES ===== */
+.wikitable {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 13px;
+}
+.wikitable th {
+  background: #eaecf0;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+.wikitable td {
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  vertical-align: top;
+}
+.wikitable tr:nth-child(even) td { background: var(--bg-gray); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #sidebar { display: none; }
+  .infobox { float: none; width: 100%; margin: 0 0 12px 0; }
+  .main-columns { grid-template-columns: 1fr; }
+  #page-tabs { padding-left: 0; }
+  #footer { padding-left: 24px; }
+  #logo-block { width: 120px; }
+}
