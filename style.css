@@ -29,6 +29,109 @@ a:visited { color: var(--blue-v); }
 a:hover { text-decoration: underline; }
 a.redlink { color: var(--red); }
 
+/* ===== VOTE BANNER ===== */
+#vote-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #0f0820 0%, #1a0830 40%, #1a0820 100%);
+  border-bottom: 2px solid #6C288C;
+  text-decoration: none;
+  box-shadow: 0 2px 20px rgba(108,40,140,0.35);
+  position: relative;
+  overflow: hidden;
+}
+#vote-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(108,40,140,0.08) 50%, transparent 100%);
+  animation: banner-shimmer 3s ease-in-out infinite;
+}
+@keyframes banner-shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+#vote-banner:hover {
+  text-decoration: none;
+  box-shadow: 0 2px 30px rgba(108,40,140,0.5), 0 0 40px rgba(221,29,38,0.2);
+}
+#vote-banner:hover .vote-text {
+  filter: brightness(1.15);
+  transform: scale(1.03);
+}
+.vote-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DD1D26;
+  box-shadow: 0 0 8px #DD1D26, 0 0 16px rgba(221,29,38,0.5);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px #DD1D26, 0 0 16px rgba(221,29,38,0.5); transform: scale(1); }
+  50% { box-shadow: 0 0 14px #DD1D26, 0 0 28px rgba(221,29,38,0.7); transform: scale(1.2); }
+}
+.vote-text {
+  background: linear-gradient(135deg, #DD1D26 0%, #6C288C 100%);
+  color: #FFFE00;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(221,29,38,0.3), 0 0 10px rgba(108,40,140,0.25);
+  transition: filter 0.15s, transform 0.1s;
+  position: relative;
+  z-index: 1;
+}
+.vote-sep {
+  color: #6C288C;
+  font-size: 18px;
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+}
+.vote-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.vote-round {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+.vote-round:empty { display: none; }
+.vote-live {
+  background: #DD1D26;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode adjustments (banner is already dark-themed, just tweak for light scarnopedia) */
+[data-theme="dark"] #vote-banner {
+  border-bottom-color: #6C288C;
+}
+
 /* ===== SITE HEADER ===== */
 #site-header {
   background: #fff;
