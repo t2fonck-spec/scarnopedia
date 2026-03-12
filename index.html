@@ -18,8 +18,8 @@
     <form id="search-form" onsubmit="return false;">
       <input type="text" placeholder="Search Scarnopedia">
       <button type="submit">🔍</button>
-    </form>
-    <div id="personal-tools">
+    </form><div id="search-results"></div>
+    <div id="personal-tools"><button id="theme-toggle" aria-label="Toggle dark mode"></button>
       <a href="#">Create account</a> · <a href="#">Log in</a>
     </div>
   </div>
@@ -42,8 +42,8 @@
       <h3>Navigation</h3>
       <ul>
         <li><a href="index.html"><b>Main Page</b></a></li>
-        <li><a href="#">Random Article</a></li>
-        <li><a href="#">Recent Changes</a></li>
+        <li><a href="events/kraft-singles-incident.html">Random Article</a></li>
+        <li><a href="index.html">Recent Changes</a></li>
       </ul>
     </div>
     <hr class="sidebar-divider">
@@ -62,6 +62,21 @@
         <li><a href="channels/announcements.html">📢 Announcements</a></li>
         <li><a href="channels/film-club.html">🎥 TLM Film Club</a></li>
         <li><a href="channels/suggestion-box.html">🗑 Suggestion Box</a></li>
+        <li><a href="channels/poor-richards.html">🍔 Poor Richards</a></li>
+        <li><a href="channels/low-budget-vibes.html">🎵 Low Budget Vibes</a></li>
+        <li><a href="channels/stonks.html">📈 Stonks</a></li>
+        <li><a href="channels/video-chat.html">🎬 Video Chat</a></li>
+        <li><a href="channels/fantasy-football.html">🏈 Fantasy Football</a></li>
+        <li><a href="channels/cod.html">🔫 Call of Duty</a></li>
+        <li><a href="channels/helldivers.html">🪖 Helldivers</a></li>
+        <li><a href="channels/minecon.html">⛏️ Minecon</a></li>
+        <li><a href="channels/rl.html">🚗 Rocket League</a></li>
+        <li><a href="channels/no-mans-guy.html">🚀 No Mans Guy</a></li>
+        <li><a href="channels/wordle.html">🟩 Wordle</a></li>
+        <li><a href="channels/survivor-man.html">🏕️ Survivor Man</a></li>
+        <li><a href="channels/our-dads.html">👨 Our Dads</a></li>
+        <li><a href="channels/retreat-planning.html">📋 Retreat Planning</a></li>
+        <li><a href="channels/boosters.html">💖 Boosters</a></li>
       </ul>
     </div>
     <hr class="sidebar-divider">
@@ -99,7 +114,7 @@
     <h1 id="firstHeading" style="font-size:32px; text-align:center; border:none; padding-bottom:0; margin-bottom:4px;">Welcome to <em style="font-style:normal; color:#c00;">Scarn</em>opedia</h1>
     <p style="text-align:center; color:#54595d; font-size:13px; margin-bottom:16px; font-style:italic;">The free encyclopedia of <b>Threat Level Midnight</b> — the Discord server. Anyone can read. <span class="redlink">Nobody edits.</span></p>
     <p style="text-align:center; color:#54595d; font-size:13px; margin-bottom:20px;">
-      <a href="#">Channels</a> · <a href="#">Members</a> · <a href="#">Events</a> · <a href="#">Categories</a>
+      <a href="channels/conference-room.html">Channels</a> · <a href="users/king-scubdu.html">Members</a> · <a href="events/kraft-singles-incident.html">Events</a> · <a href="channels/announcements.html">Categories</a>
     </p>
 
     <!-- FEATURED ARTICLE -->
@@ -108,7 +123,7 @@
       <div class="box-body" style="display:flex; gap:16px;">
         <div style="flex:1;">
           <p><b><a href="events/kraft-singles-incident.html">The Kraft Singles Incident</a></b> (also known as <i>The Kraftening</i> or <i>The Donnybrook</i>) was a watershed moment in Threat Level Midnight server history, occurring on <b>January 21, 2023</b> in the <a href="channels/conference-room.html">👔 Conference Room</a>.</p>
-          <p style="margin-top:8px;">What began as a simple question about spelling—"<i>Are you trying to say craft or Kraft?</i>"—escalated into a full-scale philosophical debate about whether <a href="#">Kraft Singles</a> constitute real cheese. The incident was so culturally significant that it led to the creation of a dedicated server emoji, an annual commemoration on January 21st, and is referenced to this day as a turning point in the server's culture.</p>
+          <p style="margin-top:8px;">What began as a simple question about spelling—"<i>Are you trying to say craft or Kraft?</i>"—escalated into a full-scale philosophical debate about whether <a class="redlink" href="events/kraft-singles-incident.html">Kraft Singles</a> constitute real cheese. The incident was so culturally significant that it led to the creation of a dedicated server emoji, an annual commemoration on January 21st, and is referenced to this day as a turning point in the server's culture.</p>
           <p style="margin-top:8px;">Key participants included <a href="users/king-scubdu.html">King Scubdu</a>, <a href="users/josh.html">Josh</a>, <a href="users/thaddy.html">Thaddy Thee Galleon</a>, and <a href="users/ianternet.html">Ianternet McAnus</a>. The aftermath led Ianternet to a philosophical revelation: <i>"Take nothing seriously."</i></p>
           <p style="margin-top:8px;"><a href="events/kraft-singles-incident.html">Read more →</a></p>
         </div>
@@ -167,6 +182,8 @@
             <li><a href="channels/announcements.html">📢 Announcements</a></li>
             <li><a href="channels/bill-chain.html">🏦 The Bill Chain</a> — Server economy</li>
             <li><a href="channels/suggestion-box.html">🗑 Suggestion Box</a></li>
+            <li><a href="channels/stonks.html">📈 Stonks</a> — Finance &amp; crypto</li>
+            <li><a href="channels/boosters.html">💖 Boosters</a> — Nitro boosting</li>
           </ul>
           <p style="font-size:12px; color:#54595d; margin:10px 0 8px;"><b>Scranton Branch</b></p>
           <ul style="padding-left:18px; line-height:1.9; font-size:13px;">
@@ -174,12 +191,28 @@
             <li><a href="channels/memememes.html">🍆 Memememes</a></li>
             <li><a href="channels/arousingtrucks.html">🧿 Arousingtrucks</a></li>
             <li><a href="channels/battery-talk.html">🔌 Battery Talk</a></li>
+            <li><a href="channels/poor-richards.html">🍔 Poor Richards</a> — Food &amp; cooking</li>
+            <li><a href="channels/low-budget-vibes.html">🎵 Low Budget Vibes</a> — Music</li>
+            <li><a href="channels/video-chat.html">🎬 Video Chat</a> — Filmmaking</li>
+            <li><a href="channels/survivor-man.html">🏕️ Survivor Man</a> — Outdoors &amp; guns</li>
+            <li><a href="channels/our-dads.html">👨 Our Dads</a> — Dad appreciation</li>
+            <li><a href="channels/wordle.html">🟩 Wordle</a> — Daily word game</li>
+            <li><a href="channels/retreat-planning.html">📋 Retreat Planning</a></li>
           </ul>
           <p style="font-size:12px; color:#54595d; margin:10px 0 8px;"><b>Finer Things Club</b></p>
           <ul style="padding-left:18px; line-height:1.9; font-size:13px;">
             <li><a href="channels/full-mast.html">🏀 Full Mast</a></li>
             <li><a href="channels/big-gamer-time.html">🎮 Big Gamer Time</a></li>
             <li><a href="channels/film-club.html">🎥 TLM Film Club</a></li>
+            <li><a href="channels/fantasy-football.html">🏈 Fantasy Football</a></li>
+          </ul>
+          <p style="font-size:12px; color:#54595d; margin:10px 0 8px;"><b>Gaming Channels</b></p>
+          <ul style="padding-left:18px; line-height:1.9; font-size:13px;">
+            <li><a href="channels/cod.html">🔫 Call of Duty</a></li>
+            <li><a href="channels/helldivers.html">🪖 Helldivers</a></li>
+            <li><a href="channels/minecon.html">⛏️ Minecon</a></li>
+            <li><a href="channels/rl.html">🚗 Rocket League</a></li>
+            <li><a href="channels/no-mans-guy.html">🚀 No Mans Guy</a></li>
           </ul>
         </div>
       </div>
@@ -211,7 +244,7 @@
 
     <div id="catlinks" style="margin-top:20px;">
       <span class="catlinks-label">Categories:</span>
-      <a href="#">Channels</a> · <a href="#">Members</a> · <a href="#">Events</a> · <a href="#">Inside Jokes</a> · <a href="#">Server History</a>
+      <a href="channels/conference-room.html">Channels</a> · <a href="users/king-scubdu.html">Members</a> · <a href="events/kraft-singles-incident.html">Events</a> · <a href="events/kraft-singles-incident.html">Inside Jokes</a> · <a href="events/pubg-era.html">Server History</a>
     </div>
   </div><!-- end content -->
 
@@ -219,11 +252,12 @@
 
 <div id="footer">
   <span>Scarnopedia® — Threat Level Midnight's Free Encyclopedia</span>
-  <a href="#">Privacy Policy</a>
-  <a href="#">About Scarnopedia</a>
-  <a href="#">Disclaimers</a>
+  <a href="index.html">Privacy Policy</a>
+  <a href="index.html">About Scarnopedia</a>
+  <a href="index.html">Disclaimers</a>
   <span style="margin-left:auto; color:#ccc;">Powered by MediaWiki (sort of)</span>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
