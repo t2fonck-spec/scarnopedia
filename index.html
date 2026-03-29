@@ -10,24 +10,12 @@
 
 <!-- VOTE BANNER -->
 <a href="https://memes.scarnopedia.org" id="vote-banner" target="_blank">
-  <span class="vote-pulse"></span>
+  <span class="vote-trophy">🏆</span>
   <img src="meme-madness-logo.png" alt="Meme Madness" class="vote-logo" />
   <span class="vote-sep">|</span>
-  <span class="vote-text">VOTE NOW</span>
-  <span class="vote-round"></span>
-  <span class="vote-live">LIVE</span>
+  <span class="vote-text">VIEW RESULTS</span>
+  <span class="vote-badge">WINNER DECLARED</span>
 </a>
-<script>
-fetch('https://memes.scarnopedia.org/api/state')
-  .then(r => r.json())
-  .then(data => {
-    const active = data.rounds && data.rounds.find(r => r.status === 'active');
-    if (active) {
-      document.querySelector('.vote-round').textContent = active.name;
-    }
-  })
-  .catch(() => {});
-</script>
 
 <!-- HEADER -->
 <div id="site-header">
